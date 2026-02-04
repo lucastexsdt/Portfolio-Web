@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Koh Le Jie Cybersecurity Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./static/css/styles.css" />
+</head>
+
+<body>
+  <div class="background-grid"></div>
+  <div class="background-orb orb-1"></div>
+  <div class="background-orb orb-2"></div>
+
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <div class="logo-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"
+            aria-hidden="true">
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+            </path>
+          </svg>
+          <div class="logo">KLJ.cyber</div>
+        </div>
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Overview</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+        <li><a href="cca.html" class="nav-link">CCA & Leadership</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Projects Section -->
+    <section id="projects" class="page-section active">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <div class="underline"></div>
+        <p style="color: var(--text-dim); margin-top: 1rem">
+          Click on any project to view detailed information about the work
+          process and results.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card" onclick="openProjectDetail('project1')">
+          <div class="project-thumbnail">
+            <!-- Replace with your actual thumbnail image URL -->
+            <img class="project-thumbnail-img" src="./static/img/Network_Diagram.png" alt="Project 1"
+              onerror="this.style.display = 'none'" />
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-title">
+              Virtual Server Vulnerability Assessment
+            </div>
+            <div class="project-card-tag">Security Analysis</div>
+            <div class="project-card-description">
+              Comprehensive security assessment using Nmap and OpenVAS to
+              identify and prioritize vulnerabilities across Linux systems.
+            </div>
+            <div class="project-card-cta">View Details</div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" onclick="openProjectDetail('project2')">
+          <div class="project-thumbnail">
+            <!-- Replace with your actual thumbnail image URL -->
+            <img class="project-thumbnail-img" src="./static/img/Ransomware_Notes.png" alt="Project 2"
+              onerror="this.style.display = 'none'" />
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-title">
+              Network Incident Investigation
+            </div>
+            <div class="project-card-tag">Incident Response</div>
+            <div class="project-card-description">
+              End-to-end incident investigation using PCAP analysis, SIEM
+              tools, and forensic techniques to identify and contain security
+              threats.
+            </div>
+            <div class="project-card-cta">View Details</div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" onclick="openProjectDetail('project3')">
+          <div class="project-thumbnail">
+            <!-- Replace with your actual thumbnail image URL -->
+            <img class="project-thumbnail-img" src="./static/img/Blog_Page.png" alt="Project 3"
+              onerror="this.style.display = 'none'" />
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-title">
+              Story & Memory Management System
+            </div>
+            <div class="project-card-tag">Web Development</div>
+            <div class="project-card-description">
+              Full-stack web application with CRUD operations, database
+              management, and security features using Flask and SQLite.
+            </div>
+            <div class="project-card-cta">View Details</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modals -->
+  <!-- Project 1 Detail -->
+  <div class="project-detail-modal" id="project1-modal">
+    <div class="project-detail-container">
+      <div class="project-detail-header">
+        <button class="project-detail-close" onclick="closeProjectDetail('project1')">
+          ×
+        </button>
+        <h2 class="project-detail-title">
+          Virtual Server Vulnerability Assessment
+        </h2>
+        <div class="project-detail-meta">
+          <span class="project-detail-tag">Security Analysis</span>
+          <span class="project-detail-tag">Nmap</span>
+          <span class="project-detail-tag">OpenVAS</span>
+        </div>
+      </div>
+
+      <div class="project-detail-content">
+        <!-- Project Overview -->
+        <div class="project-detail-section">
+          <h3>Project Overview</h3>
+          <p class="project-detail-description">
+            This project involved conducting a comprehensive vulnerability
+            assessment on two Linux virtual machines in a controlled lab
+            environment. The objective was to identify security weaknesses,
+            document findings with industry-standard CVE references, and
+            develop a prioritized remediation strategy based on risk severity.
+          </p>
+        </div>
+
+        <!-- Visual Evidence -->
+        <div class="project-detail-section">
+          <h3>Visuals & Screenshots</h3>
+          <div class="project-images-grid">
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <!-- Replace YOUR_IMAGE_URL with actual image URLs -->
+                <img class="project-detail-image" src="./static/img/Network_Diagram.png" alt="Network Diagram"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Network Diagram</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <!-- Replace YOUR_IMAGE_URL with actual image URLs -->
+                <img class="project-detail-image" src="./static/img/NmapScan.png" alt="Nmap Scan Results"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Nmap Scan</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/OpenVAS.png" alt="OpenVAS Results"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">OpenVAS Findings</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/CVE_Documentation.png" alt="Vulnerability Report"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">CVE Documentation</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Role & Involvement -->
+        <div class="project-detail-section">
+          <h3>My Role & Involvement</h3>
+          <div class="role-box">
+            <h4>Security Analyst</h4>
+            <p>
+              I independently led this vulnerability assessment project from
+              planning through execution and documentation. My
+              responsibilities included configuring the lab environment,
+              executing scans using industry-standard tools, analyzing
+              results, mapping vulnerabilities to CVE identifiers, assessing
+              risk levels, and producing comprehensive security documentation
+              with actionable remediation recommendations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Process -->
+        <div class="project-detail-section">
+          <h3>Work Process & Methodology</h3>
+          <div class="process-timeline">
+            <div class="process-step">
+              <h4>1. Environment Setup & Planning</h4>
+              <p>
+                Configured two Linux virtual machines in an isolated lab
+                environment. Reviewed project scope and defined assessment
+                objectives aligned with industry best practices.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>2. Network Reconnaissance (Nmap)</h4>
+              <p>
+                Performed comprehensive network scanning using Nmap to
+                identify live hosts, open ports, running services, and service
+                versions. Documented all exposed services and potential attack
+                vectors.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>3. Vulnerability Scanning (OpenVAS)</h4>
+              <p>
+                Executed automated vulnerability scans using OpenVAS against
+                both target systems. Configured scan profiles to detect
+                configuration weaknesses, outdated software versions, and
+                known security vulnerabilities.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>4. Results Analysis & CVE Mapping</h4>
+              <p>
+                Analyzed scan results to identify 18 distinct vulnerabilities.
+                Cross-referenced findings with the CVE database to assign
+                standardized identifiers and severity ratings (Critical, High,
+                Medium, Low).
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>5. Risk Assessment & Prioritization</h4>
+              <p>
+                Evaluated each vulnerability's potential business impact
+                considering exploitability, data sensitivity, and system
+                criticality. Prioritized remediation actions based on risk
+                severity.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>6. Documentation & Reporting</h4>
+              <p>
+                Produced detailed security assessment report including
+                executive summary, technical findings, CVE mappings, risk
+                ratings, and prioritized mitigation recommendations for each
+                identified vulnerability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Achieved -->
+        <div class="project-detail-section">
+          <h3>Results & Achievements</h3>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-number">18</div>
+              <div class="result-label">Vulnerabilities Identified</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">100%</div>
+              <div class="result-label">CVE Mapped</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">2</div>
+              <div class="result-label">Systems Assessed</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">15+</div>
+              <div class="result-label">Services Analyzed</div>
+            </div>
+          </div>
+          <p class="project-detail-description" style="margin-top: 2rem">
+            Successfully identified critical security gaps including outdated
+            service versions, misconfigurations, and unnecessary exposed
+            services. Developed a prioritized remediation roadmap that
+            addressed high-risk vulnerabilities first. This project
+            demonstrated proficiency in vulnerability management workflows,
+            security tool operation, and professional security documentation
+            practices.
+          </p>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-detail-section">
+          <h3>Technologies & Tools</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Nmap</span>
+            <span class="tech-tag">OpenVAS</span>
+            <span class="tech-tag">Linux</span>
+            <span class="tech-tag">CVE Database</span>
+            <span class="tech-tag">Vulnerability Management</span>
+            <span class="tech-tag">Risk Assessment</span>
+            <span class="tech-tag">Security Documentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 Detail -->
+  <div class="project-detail-modal" id="project2-modal">
+    <div class="project-detail-container">
+      <div class="project-detail-header">
+        <button class="project-detail-close" onclick="closeProjectDetail('project2')">
+          ×
+        </button>
+        <h2 class="project-detail-title">Network Forensics & Ransomware Analysis</h2>
+        <div class="project-detail-meta">
+          <span class="modal-tag">Wireshark</span>
+          <span class="modal-tag">Sguil</span>
+          <span class="modal-tag">Kibana</span>
+          <span class="modal-tag">Incident Response</span>
+        </div>
+      </div>
+
+      <div class="project-detail-content">
+        <!-- Project Overview -->
+        <div class="project-detail-section">
+          <h3>Project Overview</h3>
+          <p class="project-detail-description">
+            Investigated a security breach at "Lion Health" involving the CryptoWall ransomware.
+            Using packet analysis and SIEM tools, I reconstructed the full attack chain—from the initial
+            drive-by download via the "Angle Exploit Kit" to the final C2 communication.
+          </p>
+        </div>
+
+        <!-- Visual Evidence -->
+        <div class="project-detail-section">
+          <h3>Visuals & Screenshots</h3>
+          <div class="project-images-grid">
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Ransomware_Notes.png" alt="Wireshark Analysis"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Ransom Note</small>
+            </div>
+
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Wireshark_Analysis.png" alt="Wireshark Analysis"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Wireshark PCAP Analysis</small>
+            </div>
+
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Sguil.png" alt="Sguil Alerts"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Sguil Alert Correlation</small>
+            </div>
+
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Mitigation_Strategies.png"
+                  alt="Recommended Defense Strategy" onclick="expandImage(this.src)"
+                  onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Recommended Defense Strategy</small>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- My Role & Involvement -->
+        <div class="project-detail-section">
+          <h3>My Role & Involvement</h3>
+          <div class="role-box">
+            <h4>Incident Response Analyst</h4>
+            <p>
+              I served as the lead analyst for this incident investigation,
+              responsible for examining all available evidence including
+              network packet captures, security alerts, and log data. I
+              performed deep packet analysis, correlated events across
+              multiple data sources, identified malicious activity patterns,
+              and produced a comprehensive incident report with technical
+              findings and strategic recommendations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Process -->
+        <div class="project-detail-section">
+          <h3>Work Process & Investigation Steps</h3>
+          <div class="process-timeline">
+            <div class="process-step">
+              <h4>1. Initial Triage & Evidence Collection</h4>
+              <p>
+                Gathered all available evidence including PCAP files, security
+                alerts from Sguil, and log data accessible through Kibana.
+                Established investigation scope and documented initial
+                observations.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>2. Network Traffic Analysis (Wireshark)</h4>
+              <p>
+                Performed detailed packet-level analysis using Wireshark to
+                examine network communications, identify suspicious traffic
+                patterns, extract file transfers, and analyze protocol
+                behaviors. Applied display filters to isolate relevant traffic
+                flows.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>3. Alert Correlation (Sguil)</h4>
+              <p>
+                Reviewed and validated security alerts generated by intrusion
+                detection systems through Sguil interface. Correlated alerts
+                with PCAP evidence to distinguish true positives from false
+                positives and establish event relationships.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>4. Log Analysis & Visualization (Kibana)</h4>
+              <p>
+                Utilized Kibana to search, filter, and visualize log data
+                across the investigation timeframe. Created custom
+                visualizations to identify anomalies, track attacker
+                movements, and support timeline reconstruction.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>5. IOC Identification & Timeline Construction</h4>
+              <p>
+                Identified key indicators of compromise including malicious IP
+                addresses, suspicious file hashes, unusual processes, and
+                command-and-control communications. Constructed a detailed
+                incident timeline mapping attacker actions chronologically.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>6. Reporting & Recommendations</h4>
+              <p>
+                Produced formal incident report documenting investigation
+                methodology, technical findings, IOCs, attack timeline,
+                business impact assessment, and evidence-based containment and
+                prevention recommendations to strengthen security posture.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Achieved -->
+        <div class="project-detail-section">
+          <h3>Results & Achievements</h3>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-number">1</div>
+              <div class="result-label">Complete Timeline</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">Multiple</div>
+              <div class="result-label">IOCs Identified</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">3</div>
+              <div class="result-label">Analysis Tools Used</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">100%</div>
+              <div class="result-label">Evidence Documented</div>
+            </div>
+          </div>
+          <p class="project-detail-description" style="margin-top: 2rem">
+            Successfully reconstructed the complete attack chain from initial
+            compromise through data exfiltration. Identified all key
+            indicators of compromise and provided actionable containment steps
+            including isolating affected systems, blocking malicious IPs, and
+            updating detection rules. Recommended preventive measures
+            including security awareness training, patch management
+            improvements, and network segmentation to reduce future risk.
+          </p>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-detail-section">
+          <h3>Technologies & Tools</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Wireshark</span>
+            <span class="tech-tag">Sguil</span>
+            <span class="tech-tag">Kibana</span>
+            <span class="tech-tag">PCAP Analysis</span>
+            <span class="tech-tag">IDS/IPS</span>
+            <span class="tech-tag">Log Analysis</span>
+            <span class="tech-tag">IOC Identification</span>
+            <span class="tech-tag">Incident Response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 Detail -->
+  <div class="project-detail-modal" id="project3-modal">
+    <div class="project-detail-container">
+      <div class="project-detail-header">
+        <button class="project-detail-close" onclick="closeProjectDetail('project3')">
+          ×
+        </button>
+        <h2 class="project-detail-title">Story & Memory Management System</h2>
+        <div class="project-detail-meta">
+          <span class="project-detail-tag">Web Development</span>
+          <span class="project-detail-tag">Flask</span>
+          <span class="project-detail-tag">SQLite</span>
+        </div>
+      </div>
+
+      <div class="project-detail-content">
+        <!-- Project Overview -->
+        <div class="project-detail-section">
+          <h3>Project Overview</h3>
+          <p class="project-detail-description">
+            This full-stack web application project involved designing and
+            developing a content management system for stories and memories
+            with comprehensive CRUD (Create, Read, Update, Delete) operations.
+            The application features user interaction capabilities, database
+            management, input validation, secure file upload functionality,
+            and proper error handling to ensure both functionality and
+            security.
+          </p>
+        </div>
+
+        <!-- Visual Evidence -->
+        <div class="project-detail-section">
+          <h3>Visuals & Screenshots</h3>
+          <div class="project-images-grid">
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Blog_Page.png" alt="Application Interface"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Blog Page</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Database.png" alt="Database Schema"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Database Design</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Publish_Page.png" alt="Publish Page Demonstration"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Publish Page</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Handle_Validation_Error.png"
+                  alt="Error Validation Demonstration" onclick="expandImage(this.src)"
+                  onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Handle Error Validation</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/User_Content_Page.png"
+                  alt="Content Page Demonstration" onclick="expandImage(this.src)"
+                  onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">User Content Page</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Admin_Content_Page.png"
+                  alt="Content Page Demonstration" onclick="expandImage(this.src)"
+                  onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Admin Content Page</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Role & Involvement -->
+        <div class="project-detail-section">
+          <h3>My Role & Involvement</h3>
+          <div class="role-box">
+            <h4>Full Stack Developer — Story & Memory Management System</h4>
+            <p>
+              I architected and built the complete Story & Memory Management feature.
+              On the Backend (Flask & SQLite), I designed the database schema,
+              implemented CRUD routes, and created the "For You" sorting algorithm.
+              On the Frontend, I built the responsive interface using Bootstrap 5,
+              integrated the "What's New" carousel, and implemented real-time user interactions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Process -->
+        <div class="project-detail-section">
+          <h3>Development Process & Implementation</h3>
+          <div class="process-timeline">
+            <div class="process-step">
+              <h4>1. Requirements & Planning</h4>
+              <p>
+                Defined application requirements for story/memory management
+                system including CRUD operations, user interactions (likes,
+                comments, bookmarks), and content moderation features.
+                Designed database schema and planned application architecture.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>2. Database Design & Setup (SQLite)</h4>
+              <p>
+                Designed relational database schema to support stories,
+                comments, likes, views, bookmarks, and report functionalities.
+                Implemented proper relationships, constraints, and indexes for
+                optimal performance and data integrity.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>3. Backend Development (Flask)</h4>
+              <p>
+                Developed Flask backend routes to support CRUD for blog posts and user interactions.
+                Integrated SQLite for data storage and handled create/update/delete workflows reliably.
+                Implemented server-side validation and error handling to ensure clean submissions.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>4. Security Implementation</h4>
+              <p>
+                Implemented server-side input validation for titles and content to reduce invalid or unsafe submissions.
+                Added file upload validation with size limits and allowed file type checks.
+                Used parameterized database queries to improve data safety and integrity.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>5. Frontend Development & UX</h4>
+              <p>
+                Built responsive pages using HTML/CSS and Bootstrap.
+                Integrated flash messages and toast notifications to guide users during errors and submissions.
+                Added basic client-side checks to improve usability alongside server-side validation.
+              </p>
+            </div>
+            <div class="process-step">
+              <h4>6. Testing & Documentation</h4>
+              <p>
+                Tested key workflows (publish, update, image upload, validation errors) to ensure features work
+                correctly.
+                Verified database operations for posts and interactions (comments, likes, bookmarks, reports).
+                Documented feature flow and validation rules with screenshots and notes for the project report.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Achieved -->
+        <div class="project-detail-section">
+          <h3>Results & Achievements</h3>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-number">Full</div>
+              <div class="result-label">CRUD Operations</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">6</div>
+              <div class="result-label">Database Tables</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">5+</div>
+              <div class="result-label">User Features</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">100%</div>
+              <div class="result-label">Input Validated</div>
+            </div>
+          </div>
+          <p class="project-detail-description" style="margin-top: 2rem">
+            Successfully delivered a fully functional content management
+            system with robust security features. The application supports
+            complete story lifecycle management including creation, editing,
+            deletion, and social features like commenting and bookmarking.
+            Implemented proper error handling with user-friendly feedback
+            mechanisms through Flash messages and toast notifications.
+            Security measures including comprehensive input validation and SQL
+            injection prevention ensure safe operation.
+          </p>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-detail-section">
+          <h3>Technologies & Tools</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask Framework</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">Input Validation</span>
+            <span class="tech-tag">SQL Injection Prevention</span>
+            <span class="tech-tag">File Upload Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <a href="index.html" class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+            </path>
+          </svg>
+          <span class="footer-brand">KLJ.cyber</span>
+        </a>
+        <p class="footer-copyright">&copy; 2026 Koh Le Jie. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:lucaskoh3733@gmail.com" class="footer-icon" aria-label="Email" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/koh-le-jie/" class="footer-icon" aria-label="LinkedIn" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://github.com/lucastexsdt" class="footer-icon" aria-label="GitHub" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 -.5-3 0-1.64-.5-3.59-.5-5 0-2.64 2.05-4 5.5-4 3.5 0 3 2.5 3 2.5s1.5-1 3-1 2 .5 2 .5-1.5 1-2 3c.5.75.738 1.56.738 2.5 0 3.5-2 5.5-5.5 5.5.5.5 1 1.5 1 2.5v4">
+            </path>
+            <path d="M9 18c-4.5 2-5-2-7-2"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Expansion Modal -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-modal-close" onclick="closeImageModal()">×</button>
+      <img class="image-modal-img" id="expandedImage" src="" alt="Expanded View" />
+    </div>
+  </div>
+
+  <script src="./static/js/script.js"></script>
+</body>
+
+</html>
