@@ -312,19 +312,11 @@ nav .nav-container {
     padding: 0.75rem 1.5rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
   .hero .tagline {
-    font-size: 1rem;
-  }
-
-  .typing-animation {
-    white-space: nowrap;
-    border-right: 3px solid var(--primary);
-    animation: typeWriter 2s steps(20) 0.4s both, typingBlink 0.7s step-end 0.4s infinite;
-    display: inline-block;
+    /* Force the font to be small enough to fit 26 chars on a 360px screen */
+    font-size: 14px; 
+    /* Ensure the container is centered but content aligns left to reduce "jitter" */
+    text-align: center;
   }
 }
 
@@ -351,19 +343,11 @@ nav .nav-container {
     height: 2.5px;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero .tagline {
-    font-size: 0.9rem;
-  }
-
-  .typing-animation {
-    white-space: nowrap;
-    border-right: 2px solid var(--primary);
-    animation: typeWriter 1.8s steps(18) 0.4s both, typingBlink 0.7s step-end 0.4s infinite;
-    display: inline-block;
+   .hero .tagline {
+    /* Force the font to be small enough to fit 26 chars on a 360px screen */
+    font-size: 10px; 
+    /* Ensure the container is centered but content aligns left to reduce "jitter" */
+    text-align: center;
   }
 }
 
