@@ -314,7 +314,7 @@ nav .nav-container {
 
   .hero .tagline {
     /* Force the font to be small enough to fit 26 chars on a 360px screen */
-    font-size: 14px;
+    font-size: 14px; 
     /* Ensure the container is centered but content aligns left to reduce "jitter" */
     text-align: center;
   }
@@ -343,9 +343,9 @@ nav .nav-container {
     height: 2.5px;
   }
 
-  .hero .tagline {
+   .hero .tagline {
     /* Force the font to be small enough to fit 26 chars on a 360px screen */
-    font-size: 10px;
+    font-size: 1px; 
     /* Ensure the container is centered but content aligns left to reduce "jitter" */
     text-align: center;
   }
