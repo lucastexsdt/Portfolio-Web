@@ -336,6 +336,10 @@ nav .nav-container {
     width: 22px;
     height: 2.5px;
   }
+
+  .typing-animation {
+    font-size: 0.2rem;
+  }
 }
 
 /* Main Container */
