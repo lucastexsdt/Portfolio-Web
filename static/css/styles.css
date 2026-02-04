@@ -314,16 +314,12 @@ nav .nav-container {
   }
 
   .typing-animation {
-    white-space: normal;
-    /* Allows text to break into new lines */
-    border-right: none;
-    /* Hides the cursor since animation is disabled */
-    animation: none;
-    /* Disables the width animation so text appears immediately */
+    white-space: nowrap;
+    border-right: 3px solid var(--primary);
+    animation: typeWriter 3s steps(26) 0.4s both, typingBlink 0.7s step-end 0.4s infinite;
     width: auto;
-    /* Lets the container fit the text naturally */
-    display: block;
-    /* Ensures it takes up the full width */
+    display: inline-block;
+    font-size: 1.2rem;
   }
 }
 
@@ -360,6 +356,10 @@ nav .nav-container {
 
   .typing-animation {
     font-size: 0.2rem;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary);
+    animation: typeWriter 3s steps(26) 0.4s both, typingBlink 0.7s step-end 0.4s infinite;
+    display: inline-block;
   }
 }
 
