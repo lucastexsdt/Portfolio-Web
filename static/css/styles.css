@@ -320,10 +320,6 @@ nav .nav-container {
     width: auto;               /* Lets the container fit the text naturally */
     display: block;            /* Ensures it takes up the full width */
   }
-
-  .hero .tagline {
-    font-size: 0.2rem;
-  }
 }
 
 @media (max-width: 480px) {
