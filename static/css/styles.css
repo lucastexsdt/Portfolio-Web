@@ -314,11 +314,16 @@ nav .nav-container {
   }
 
   .typing-animation {
-    white-space: normal;       /* Allows text to break into new lines */
-    border-right: none;        /* Hides the cursor since animation is disabled */
-    animation: none;           /* Disables the width animation so text appears immediately */
-    width: auto;               /* Lets the container fit the text naturally */
-    display: block;            /* Ensures it takes up the full width */
+    white-space: normal;
+    /* Allows text to break into new lines */
+    border-right: none;
+    /* Hides the cursor since animation is disabled */
+    animation: none;
+    /* Disables the width animation so text appears immediately */
+    width: auto;
+    /* Lets the container fit the text naturally */
+    display: block;
+    /* Ensures it takes up the full width */
   }
 }
 
@@ -1552,10 +1557,24 @@ footer {
 
   .hero h1 {
     font-size: 2.5rem;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word;
   }
 
   .hero .subtitle {
     font-size: 1.2rem;
+  }
+
+  .typing-animation {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .nav-links {
