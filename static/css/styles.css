@@ -349,6 +349,18 @@ nav .nav-container {
     width: 22px;
     height: 2.5px;
   }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero .tagline {
+    font-size: 1rem;
+  }
+
+  .typing-animation {
+    font-size: 1rem;
+  }
 }
 
 /* Main Container */
@@ -1556,13 +1568,17 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     word-break: break-word;
     max-width: 100%;
     overflow-wrap: break-word;
   }
 
   .hero .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero .tagline {
     font-size: 1.2rem;
   }
 
@@ -1575,6 +1591,7 @@ footer {
     display: block;
     word-break: break-word;
     overflow-wrap: break-word;
+    font-size: 1.2rem;
   }
 
   .nav-links {
