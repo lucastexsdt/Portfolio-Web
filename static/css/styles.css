@@ -349,7 +349,7 @@ nav .nav-container {
   }
 
   to {
-    width: 32ch !important;
+    width: 34ch !important;
     border-right-color: rgba(0, 255, 136, 1);
   }
 }
