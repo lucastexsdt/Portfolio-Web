@@ -335,6 +335,10 @@ nav .nav-container {
     width: 22px;
     height: 2.5px;
   }
+
+  .typing-animation {
+    font-size: 1.25rem;
+  }
 }
 
 /* Main Container */
@@ -482,7 +486,7 @@ nav .nav-container {
 
 .hero .tagline {
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: var(--primary);
   margin-bottom: 3rem;
   letter-spacing: 1px;
