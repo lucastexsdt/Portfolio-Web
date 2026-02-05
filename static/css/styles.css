@@ -345,8 +345,8 @@ nav .nav-container {
     /* Use a mobile-specific keyframes so ch length can be smaller */
     /* animation:
       typeWriterMobile 3s steps(26) 0.4s both,
-      typingBlink 0.7s step-end 0.4s infinite;
-  } */
+      typingBlink 0.7s step-end 0.4s infinite; */
+  }
 
   @keyframes typeWriterMobile {
     from {
