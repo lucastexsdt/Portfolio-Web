@@ -341,6 +341,18 @@ nav .nav-container {
     width: fit-content;
     margin: 0 auto 3rem auto;
   }
+
+  @keyframes typeWriter {
+  from {
+    width: 0;
+    border-right-color: rgba(0, 255, 136, 1);
+  }
+
+  to {
+    width: 32ch !important;
+    border-right-color: rgba(0, 255, 136, 1);
+  }
+}
 }
 
 /* Main Container */
@@ -460,7 +472,7 @@ nav .nav-container {
   }
 
   to {
-    width: 32ch;
+    width: 28ch;
     border-right-color: rgba(0, 255, 136, 1);
   }
 }
