@@ -343,9 +343,9 @@ nav .nav-container {
     display: inline-block;
     margin: 0 auto 3rem;
     /* Use a mobile-specific keyframes so ch length can be smaller */
-    /* animation:
+    animation:
       typeWriterMobile 3s steps(26) 0.4s both,
-      typingBlink 0.7s step-end 0.4s infinite; */
+      typingBlink 0.7s step-end 0.4s infinite;
   }
 
   @keyframes typeWriterMobile {
@@ -355,7 +355,7 @@ nav .nav-container {
     }
 
     to {
-      width: 40ch;
+      width: 30ch;
       border-right-color: rgba(0, 255, 136, 1);
     }
   }
