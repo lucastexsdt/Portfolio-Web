@@ -337,7 +337,7 @@ nav .nav-container {
   }
 
   .hero .tagline .typing-animation {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 }
 
