@@ -314,6 +314,11 @@ nav .nav-container {
 }
 
 @media (max-width: 480px) {
+  body {
+    /* Reset font size to standard 16px on mobile so it doesn't look huge */
+    font-size: 1rem; 
+  }
+  
   nav .nav-container {
     padding: 0.75rem 1rem;
   }
