@@ -78,6 +78,7 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translate(0, 0);
@@ -178,6 +179,7 @@ nav .nav-container {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     filter: drop-shadow(0 0 0px rgba(0, 255, 136, 0.5));
@@ -316,9 +318,9 @@ nav .nav-container {
 @media (max-width: 480px) {
   body {
     /* Reset font size to standard 16px on mobile so it doesn't look huge */
-    font-size: 1rem; 
+    font-size: 1rem;
   }
-  
+
   nav .nav-container {
     padding: 0.75rem 1rem;
   }
@@ -493,6 +495,7 @@ nav .nav-container {
 }
 
 @keyframes typingBlink {
+
   0%,
   50% {
     border-right-color: rgba(0, 255, 136, 1);
@@ -694,7 +697,7 @@ nav .nav-container {
   padding: 0.75rem 1rem;
   border-radius: 8px;
   border-left: 3px solid var(--primary);
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   transition: all 0.3s;
 }
@@ -702,6 +705,86 @@ nav .nav-container {
 .skill-item:hover {
   transform: translateX(5px);
   background: var(--dark-mid);
+}
+
+/* Skill Bars */
+.skills-container {
+  margin-bottom: 3rem;
+}
+
+.skill-bar-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.skill-percentage {
+  color: var(--primary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: var(--dark-light);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+  transition: width 1.5s ease-out;
+  position: relative;
+  animation: skillBarAnimation 1.5s ease-out;
+  z-index: 1;
+}
+
+@keyframes skillBarAnimation {
+  from {
+    width: 0;
+  }
+}
+
+.skill-bar-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      transparent 45%,
+      rgba(255, 255, 255, 0.2) 50%,
+      transparent 55%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
 }
 
 .work-experience {
