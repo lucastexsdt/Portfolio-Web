@@ -47,7 +47,7 @@
 
   <main class="container">
     <!-- About Section -->
-    <section id="about" class="page-section active">
+    <section id="about" class="page-section">
       <div class="section-header">
         <h2>About Me</h2>
         <div class="underline"></div>
@@ -83,32 +83,29 @@
               <span>Singapore</span>
             </div>
 
-            <div class="contact-item">
+            <div class="contact-item" style="margin-bottom: 2rem;">
               <span class="icon">💼</span>
-              <span>
-                <a href="https://www.linkedin.com/in/koh-le-jie/" class="custom-link">LinkedIn Profile
-                </a>
-              </span>
+              <a href="https://www.linkedin.com/in/koh-le-jie/" target="_blank"
+                style="color: var(--text-dim); text-decoration: none; transition: color 0.3s;"
+                onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">LinkedIn
+                Profile</a>
             </div>
-
-            <div class="contact-item">
-              <a href="Koh Le Jie_Resume&CoverPage.pdf" download onclick="showDownloadToast()"
-                class="btn btn-primary">Download
-                Resume</a>
-            </div>
-
           </div>
+
+          <a href="Koh Le Jie_Resume&CoverPage.pdf" download="Koh_Le_Jie_Resume.pdf" class="btn btn-primary"
+            style="width: 100%; margin-top: 2rem; text-align: center;"> Download Resume
+          </a>
         </div>
 
         <div class="about-details">
           <h3>Professional Profile</h3>
           <div class="about-text">
-            I am a dedicated cybersecurity graduate with a passion for
+            I am a dedicated cybersecurity student with a passion for
             protecting digital assets and ensuring secure operations. My
             journey in cybersecurity began during my Higher Nitec studies at
             ITE College Central, where I graduated with a perfect 4.0 GPA and
-            multiple academic honors. Having recently completed my Diploma in
-            Cybersecurity at Nanyang Polytechnic, I have developed strong
+            multiple academic honors. Currently pursuing my Diploma in
+            Cybersecurity at Nanyang Polytechnic, I am focused on developing
             practical skills in security monitoring, incident response, and
             vulnerability management.
           </div>
@@ -246,99 +243,67 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <h3>Work Experience</h3>
-        <div class="work-experience">
-          <div class="work-header">
-            <div>
-              <div class="work-title">IT Support Specialist</div>
-              <div class="work-company">
-                Income Insurance Limited (Internship)
+          <h3>Work Experience</h3>
+          <div class="work-experience">
+            <div class="work-header">
+              <div>
+                <div class="work-title">IT Support Specialist</div>
+                <div class="work-company">Income Insurance Limited (Internship)</div>
               </div>
+              <div class="work-date">Sep 2023 - Apr 2024</div>
             </div>
-            <div class="work-date">Sep 2023 - Apr 2024</div>
+            <ul class="work-description">
+              <li>Imaged and set up desktops/laptops (OS cloning + device configuration)</li>
+              <li>Applied company endpoint policies and standard security settings</li>
+              <li>Managed device inventory and tracked issuance/returns</li>
+              <li>Provided IT support for company and BYOD devices (troubleshooting + escalation)</li>
+              <li>Performed remote support for patching, software installs, and issue resolution</li>
+            </ul>
           </div>
-          <ul class="work-description">
-            <li>
-              Imaged and configured desktops/laptops using OS cloning and
-              standardized device setup procedures
-            </li>
-            <li>
-              Applied company endpoint policies and standard security
-              settings to ensure compliance with organizational security
-              requirements
-            </li>
-            <li>
-              Managed comprehensive device inventory, tracking issuance and
-              returns with accurate documentation
-            </li>
-            <li>
-              Provided technical support for both company-owned and BYOD
-              devices, handling troubleshooting and appropriate escalation
-            </li>
-            <li>
-              Performed remote support for patching, software installations,
-              and issue resolution while maintaining security protocols
-            </li>
-            <li>
-              Developed strong operational discipline through adherence to
-              security procedures and proper handling of sensitive
-              information
-            </li>
-          </ul>
-        </div>
 
-        <h3>Education</h3>
-        <div class="work-experience">
-          <div class="work-header">
-            <div>
-              <div class="work-title">Diploma in Cybersecurity</div>
-              <div class="work-company">Nanyang Polytechnic</div>
-            </div>
-            <div class="work-date">2025 - 2028</div>
-          </div>
-          <p style="color: var(--text-dim); margin-top: 1rem">
-            Completed comprehensive cybersecurity education
-            covering security operations, network defense, and incident
-            response.
-          </p>
-        </div>
-
-        <div class="work-experience">
-          <div class="work-header">
-            <div>
-              <div class="work-title">
-                Higher Nitec in Cyber & Network Security
+          <h3>Education</h3>
+          <div class="work-experience">
+            <div class="work-header">
+              <div>
+                <div class="work-title">Diploma in Cybersecurity</div>
+                <div class="work-company">Nanyang Polytechnic</div>
               </div>
-              <div class="work-company">ITE College Central</div>
+              <div class="work-date">2025 - 2028</div>
             </div>
-            <div class="work-date">2022 - 2024</div>
+            <p style="color: var(--text-dim); margin-top: 1rem;">Currently pursuing comprehensive cybersecurity
+              education covering security operations, network defense, and incident response.</p>
           </div>
-          <p style="color: var(--text-dim); margin-top: 1rem">
-            <strong style="color: var(--primary)">GPA: 4.0</strong> -
-            Perfect academic performance with multiple honors including
-            Outstanding Graduate Award, Director's List (Top 10%), and
-            Silver Course Medal.
-          </p>
-        </div>
 
-        <div class="work-experience">
-          <div class="work-header">
-            <div>
-              <div class="work-title">
-                GCE N-Level (Normal Technical)
+          <div class="work-experience">
+            <div class="work-header">
+              <div>
+                <div class="work-title">
+                  Higher Nitec in Cyber & Network Security
+                </div>
+                <div class="work-company">ITE College Central</div>
               </div>
-              <div class="work-company">Deyi Secondary School</div>
+              <div class="work-date">2022 - 2024</div>
             </div>
-            <div class="work-date">2018 - 2021</div>
+            <p style="color: var(--text-dim); margin-top: 1rem;"><strong style="color: var(--primary);">GPA:
+                4.0/4.0</strong> - Perfect academic performance with multiple honors including Outstanding Graduate
+              Award, Director's List (Top 10%), and Silver Course Medal.</p>
           </div>
-          <p style="color: var(--text-dim); margin-top: 1rem">
-            <strong style="color: var(--primary)">Aggregate: 5</strong> -
-            Achieved excellent academic results leading to the Academic Award (2021).
-          </p>
+
+          <div class="work-experience">
+            <div class="work-header">
+              <div>
+                <div class="work-title">
+                  GCE N-Level (Normal Technical)
+                </div>
+                <div class="work-company">Deyi Secondary School</div>
+              </div>
+              <div class="work-date">2018 - 2021</div>
+            </div>
+            <p style="color: var(--text-dim); margin-top: 1rem;"><strong style="color: var(--primary);">Aggregate:
+                5</strong></p>
+          </div>
         </div>
-      </div>
       </div>
     </section>
   </main>
