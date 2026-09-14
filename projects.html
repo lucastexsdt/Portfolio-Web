@@ -740,161 +740,169 @@
     </div>
   </div>
 
-    <!-- Project 4 Detail -->
-    <div class="project-detail-modal" id="project4-modal">
-        <div class="project-detail-container">
-            <div class="project-detail-header">
-                <button class="project-detail-close" onclick="closeProjectDetail('project4')">×</button>
-                <h2 class="project-detail-title">Enterprise Network Security Design</h2>
-                <div class="project-detail-meta">
-                    <span class="project-detail-tag">Network Security</span>
-                    <span class="project-detail-tag">Cisco Packet Tracer</span>
-                    <span class="project-detail-tag">VLSM / OSPF / VPN</span>
-                </div>
-            </div>
-            
-            <div class="project-detail-content">
-                <div class="project-detail-section">
-                    <h3>Project Overview</h3>
-                    <p class="project-detail-description">
-                        This project involved designing and securing a full multi-site enterprise network for a fictional company, "SecureLink Solutions Pte Ltd," using Cisco Packet Tracer. The network connects a Singapore Headquarters, a Bangkok branch, and a Kuala Lumpur branch across WAN links, with a DMZ, an internal server farm, and a Cisco ASA firewall for perimeter defense. The objective was to design an efficient VLSM addressing scheme and implement layered security controls including firewall zoning, site-to-site VPN, centralized authentication, and port security.
-                    </p>
-                </div>
- 
-                <div class="project-detail-section">
-                    <h3>Visuals & Screenshots</h3>
-                    <p class="project-detail-description" style="margin-bottom: 1.5rem;">
-                        Screenshots of the network topology, verification tests, and device configurations. Replace the placeholder URLs with your actual images.
-                    </p>
-                    <div class="project-images-grid">
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/Cisco_Packet_Diagram.png" alt="Network Topology" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🗺️</div>
-                                <div class="label">Network Topology Diagram</div>
-                            </div>
-                        </div>
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/VPN_Verification.png" alt="VPN Verification" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🔐</div>
-                                <div class="label">IPsec VPN Verification</div>
-                            </div>
-                        </div>
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/OSPF_Routing_Table.png" alt="OSPF Routing Table" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🧭</div>
-                                <div class="label">OSPF Neighbor & Routing Table</div>
-                            </div>
-                        </div>
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/ASA_Firewall_Zoning.png" alt="Firewall Configuration" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🧱</div>
-                                <div class="label">ASA Firewall Zoning</div>
-                            </div>
-                        </div>
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/Port_Security_Test.png" alt="Port Security Test" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🔌</div>
-                                <div class="label">Port Security Violation Test</div>
-                            </div>
-                        </div>
-                        <div class="project-detail-image-container">
-                            <img class="project-detail-image" src="./static/img/NAT_Translation_Table.png" alt="NAT Translation Table" onerror="this.style.display='none';">
-                            <div class="project-detail-image-placeholder">
-                                <div class="icon">🌍</div>
-                                <div class="label">NAT/PAT Translation Table</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- 
-                <div class="project-detail-section">
-                    <h3>My Role & Involvement</h3>
-                    <div class="role-box">
-                        <h4>Network Security Designer</h4>
-                        <p>
-                            I independently designed and configured the entire enterprise network from the ground up, including subnet planning, device configuration, firewall policy design, VPN setup, and verification testing. I was responsible for justifying every design decision (such as VLSM over FLSM, security level assignments, and NAT architecture) and documenting the rationale behind each control to demonstrate real-world enterprise networking judgment rather than just following a checklist.
-                        </p>
-                    </div>
-                </div>
- 
-                <div class="project-detail-section">
-                    <h3>Work Process & Implementation</h3>
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <h4>1. IP Addressing & VLSM Design</h4>
-                            <p>Selected a private 192.168.0.0/16 address space and applied Variable Length Subnet Masking to right-size every segment, from a /27 for the 18-host Bangkok office down to /30 links for point-to-point WAN connections, minimizing IP address waste compared to a fixed-length scheme.</p>
-                        </div>
-                        <div class="process-step">
-                            <h4>2. Routing & Time Synchronization (OSPF/NTP)</h4>
-                            <p>Deployed OSPF Area 0 across all sites with MD5 authentication to prevent rogue routing updates, and configured the HQ router to inject a default route to the Internet. Centralized NTP with MD5-authenticated time sync ensured accurate, correlated logging across all devices.</p>
-                        </div>
-                        <div class="process-step">
-                            <h4>3. Perimeter Defense & Firewall Zoning</h4>
-                            <p>Configured a Cisco ASA firewall with security-level zoning (Inside 100, Server Farm 90, DMZ 50, Outside 0) and layered it with inbound ACLs on every edge router to filter traffic before it reached the firewall, reducing load and enforcing defense-in-depth.</p>
-                        </div>
-                        <div class="process-step">
-                            <h4>4. NAT & Public-Facing Services</h4>
-                            <p>Implemented dynamic PAT for general internal internet access and 1:1 static NAT to expose DMZ web/DNS servers publicly, while deliberately excluding the internal server farm from NAT so branch routers could reach NTP/RADIUS directly without translation issues.</p>
-                        </div>
-                        <div class="process-step">
-                            <h4>5. Site-to-Site VPN & Centralized AAA</h4>
-                            <p>Built an IPsec site-to-site VPN (AES encryption, SHA hashing) between the Kuala Lumpur and Bangkok branches to protect HTTPS traffic over the unencrypted ISP link, and centralized administrative login through RADIUS with a local fallback account on every router.</p>
-                        </div>
-                        <div class="process-step">
-                            <h4>6. Port Security & Verification Testing</h4>
-                            <p>Applied sticky MAC address port security on all access switches with violation modes tailored by sensitivity (shutdown for HQ/DMZ, restrict for branch users). Conducted 9 verification tests covering VPN encryption, NTP sync, RADIUS auth, port security breaches, OSPF adjacency, NAT translation, DHCP/DNS, and ACL enforcement, documenting each with command output and screenshots.</p>
-                        </div>
-                    </div>
-                </div>
- 
-                <div class="project-detail-section">
-                    <h3>Results & Achievements</h3>
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <div class="result-number">3</div>
-                            <div class="result-label">Sites Interconnected</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-number">9</div>
-                            <div class="result-label">Verification Tests Passed</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-number">11</div>
-                            <div class="result-label">Documented Assumptions</div>
-                        </div>
-                        <div class="result-card">
-                            <div class="result-number">100%</div>
-                            <div class="result-label">VLSM Address Efficiency</div>
-                        </div>
-                    </div>
-                    <p class="project-detail-description" style="margin-top: 2rem;">
-                        Successfully delivered a fully functional, secured enterprise network verified through 9 distinct test cases, including confirming end-to-end IPsec VPN encryption, RADIUS-authenticated SSH access, OSPF adjacency with MD5 authentication, and correct NAT/PAT translation. Port security was validated to correctly shut down or restrict rogue devices depending on the branch's risk profile. The project also produced a detailed rationale document justifying every design decision against enterprise networking best practices.
-                    </p>
-                </div>
- 
-                <div class="project-detail-section">
-                    <h3>Technologies & Tools</h3>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Cisco Packet Tracer</span>
-                        <span class="tech-tag">VLSM Subnetting</span>
-                        <span class="tech-tag">OSPF (MD5 Auth)</span>
-                        <span class="tech-tag">Cisco ASA Firewall</span>
-                        <span class="tech-tag">Site-to-Site IPsec VPN</span>
-                        <span class="tech-tag">RADIUS / AAA</span>
-                        <span class="tech-tag">NAT / PAT</span>
-                        <span class="tech-tag">DHCP & DNS</span>
-                        <span class="tech-tag">Port Security</span>
-                        <span class="tech-tag">SSH Hardening</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Project 4 Detail -->
+  <div class="project-detail-modal" id="project4-modal">
+    <div class="project-detail-container">
+      <div class="project-detail-header">
+        <button class="project-detail-close" onclick="closeProjectDetail('project4')">
+          ×
+        </button>
+        <h2 class="project-detail-title">Enterprise Network Security Design</h2>
+        <div class="project-detail-meta">
+          <span class="project-detail-tag">Network Security</span>
+          <span class="project-detail-tag">Cisco Packet Tracer</span>
+          <span class="project-detail-tag">VLSM / OSPF / VPN</span>
         </div>
+      </div>
+
+      <div class="project-detail-content">
+        <!-- Project Overview -->
+        <div class="project-detail-section">
+          <h3>Project Overview</h3>
+          <p class="project-detail-description">
+            This project involved designing and securing a full multi-site enterprise network for a fictional company, "SecureLink Solutions Pte Ltd," using Cisco Packet Tracer. The network connects a Singapore Headquarters, a Bangkok branch, and a Kuala Lumpur branch across WAN links, with a DMZ, an internal server farm, and a Cisco ASA firewall for perimeter defense. The objective was to design an efficient VLSM addressing scheme and implement layered security controls including firewall zoning, site-to-site VPN, centralized authentication, and port security.
+          </p>
+        </div>
+
+        <!-- Visual Evidence -->
+        <div class="project-detail-section">
+          <h3>Visuals & Screenshots</h3>
+          <p class="project-detail-description" style="margin-bottom: 1.5rem">
+            Screenshots of the network topology, verification tests, and device configurations.
+          </p>
+          <div class="project-images-grid">
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Cisco_Packet_Diagram.png" alt="Network Topology"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Network Topology Diagram</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/VPN_Verification.png" alt="VPN Verification"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">IPsec VPN Verification</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/OSPF_Routing_Table.png" alt="OSPF Routing Table"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">OSPF Neighbor & Routing Table</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/ASA_Firewall_Zoning.png" alt="Firewall Configuration"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">ASA Firewall Zoning</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/Port_Security_Test.png" alt="Port Security Test"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">Port Security Violation Test</small>
+            </div>
+            <div class="project-detail-figure">
+              <div class="project-detail-image-container">
+                <img class="project-detail-image" src="./static/img/NAT_Translation_Table.png" alt="NAT Translation Table"
+                  onclick="expandImage(this.src)" onerror="this.style.display = 'none'" />
+              </div>
+              <small class="project-detail-image-caption-below">NAT/PAT Translation Table</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Role & Involvement -->
+        <div class="project-detail-section">
+          <h3>My Role & Involvement</h3>
+          <div class="role-box">
+            <h4>Network Security Designer</h4>
+            <p>
+              I independently designed and configured the entire enterprise network from the ground up, including subnet planning, device configuration, firewall policy design, VPN setup, and verification testing. I was responsible for justifying every design decision (such as VLSM over FLSM, security level assignments, and NAT architecture) and documenting the rationale behind each control to demonstrate real-world enterprise networking judgment rather than just following a checklist.
+            </p>
+          </div>
+        </div>
+
+        <!-- Work Process -->
+        <div class="project-detail-section">
+          <h3>Work Process & Implementation</h3>
+          <div class="process-timeline">
+            <div class="process-step">
+              <h4>1. IP Addressing & VLSM Design</h4>
+              <p>Selected a private 192.168.0.0/16 address space and applied Variable Length Subnet Masking to right-size every segment, from a /27 for the 18-host Bangkok office down to /30 links for point-to-point WAN connections, minimizing IP address waste compared to a fixed-length scheme.</p>
+            </div>
+            <div class="process-step">
+              <h4>2. Routing & Time Synchronization (OSPF/NTP)</h4>
+              <p>Deployed OSPF Area 0 across all sites with MD5 authentication to prevent rogue routing updates, and configured the HQ router to inject a default route to the Internet. Centralized NTP with MD5-authenticated time sync ensured accurate, correlated logging across all devices.</p>
+            </div>
+            <div class="process-step">
+              <h4>3. Perimeter Defense & Firewall Zoning</h4>
+              <p>Configured a Cisco ASA firewall with security-level zoning (Inside 100, Server Farm 90, DMZ 50, Outside 0) and layered it with inbound ACLs on every edge router to filter traffic before it reached the firewall, reducing load and enforcing defense-in-depth.</p>
+            </div>
+            <div class="process-step">
+              <h4>4. NAT & Public-Facing Services</h4>
+              <p>Implemented dynamic PAT for general internal internet access and 1:1 static NAT to expose DMZ web/DNS servers publicly, while deliberately excluding the internal server farm from NAT so branch routers could reach NTP/RADIUS directly without translation issues.</p>
+            </div>
+            <div class="process-step">
+              <h4>5. Site-to-Site VPN & Centralized AAA</h4>
+              <p>Built an IPsec site-to-site VPN (AES encryption, SHA hashing) between the Kuala Lumpur and Bangkok branches to protect HTTPS traffic over the unencrypted ISP link, and centralized administrative login through RADIUS with a local fallback account on every router.</p>
+            </div>
+            <div class="process-step">
+              <h4>6. Port Security & Verification Testing</h4>
+              <p>Applied sticky MAC address port security on all access switches with violation modes tailored by sensitivity (shutdown for HQ/DMZ, restrict for branch users). Conducted 9 verification tests covering VPN encryption, NTP sync, RADIUS auth, port security breaches, OSPF adjacency, NAT translation, DHCP/DNS, and ACL enforcement, documenting each with command output and screenshots.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Achieved -->
+        <div class="project-detail-section">
+          <h3>Results & Achievements</h3>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-number">3</div>
+              <div class="result-label">Sites Interconnected</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">9</div>
+              <div class="result-label">Verification Tests Passed</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">11</div>
+              <div class="result-label">Documented Assumptions</div>
+            </div>
+            <div class="result-card">
+              <div class="result-number">100%</div>
+              <div class="result-label">VLSM Address Efficiency</div>
+            </div>
+          </div>
+          <p class="project-detail-description" style="margin-top: 2rem">
+            Successfully delivered a fully functional, secured enterprise network verified through 9 distinct test cases, including confirming end-to-end IPsec VPN encryption, RADIUS-authenticated SSH access, OSPF adjacency with MD5 authentication, and correct NAT/PAT translation. Port security was validated to correctly shut down or restrict rogue devices depending on the branch's risk profile. The project also produced a detailed rationale document justifying every design decision against enterprise networking best practices.
+          </p>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="project-detail-section">
+          <h3>Technologies & Tools</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">Cisco Packet Tracer</span>
+            <span class="tech-tag">VLSM Subnetting</span>
+            <span class="tech-tag">OSPF (MD5 Auth)</span>
+            <span class="tech-tag">Cisco ASA Firewall</span>
+            <span class="tech-tag">Site-to-Site IPsec VPN</span>
+            <span class="tech-tag">RADIUS / AAA</span>
+            <span class="tech-tag">NAT / PAT</span>
+            <span class="tech-tag">DHCP & DNS</span>
+            <span class="tech-tag">Port Security</span>
+            <span class="tech-tag">SSH Hardening</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
   <footer>
     <div class="footer-content">
