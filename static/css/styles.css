@@ -1485,6 +1485,26 @@ nav .nav-container {
   animation-delay: 1.2s;
 }
 
+.cert-badge:nth-child(5) { 
+  animation-delay: 1.3s; 
+}
+
+.cert-badge:nth-child(6) { 
+  animation-delay: 1.4s; 
+}
+
+.cert-badge:nth-child(7) { 
+  animation-delay: 1.5s; 
+}
+
+.cert-badge:nth-child(8) { 
+  animation-delay: 1.6s; 
+}
+
+.cert-badge:nth-child(9) { 
+  animation-delay: 1.7s; 
+}
+
 .cert-badge:hover {
   background: rgba(0, 255, 136, 0.1);
   transform: scale(1.05);
